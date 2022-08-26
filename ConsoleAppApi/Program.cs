@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleAppApi;
+using ConsoleAppApi.Services;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Collections.Generic;
@@ -8,10 +9,15 @@ using System.Net.Http.Json;
 Console.WriteLine("Hello, World!");
 
 
-await new RestClientService().v1();
-await new HttpClientService().v1();
-await new HttpClientService().v2();
+//await new RestClientService().v1();
+//await new HttpClientService().v1();
+//await new HttpClientService().v2();
 
+var lst = await new DapperService().GetList();
+foreach (var item in lst)
+{
+    Console.WriteLine(JsonConvert.SerializeObject(item, Formatting.Indented));
+}
 
 
 public class Roi

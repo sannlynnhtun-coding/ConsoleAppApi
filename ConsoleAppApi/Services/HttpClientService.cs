@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppApi
+namespace ConsoleAppApi.Services
 {
     public class HttpClientService
     {
