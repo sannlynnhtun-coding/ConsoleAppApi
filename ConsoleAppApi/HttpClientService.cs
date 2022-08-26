@@ -37,7 +37,6 @@ namespace ConsoleAppApi
             {
                 Console.WriteLine("{ id = " + item.id + " }");
             }
-
         }
     }
 }
